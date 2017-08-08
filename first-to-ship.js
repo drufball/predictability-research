@@ -6,5 +6,5 @@ const rl = readline.createInterface({
 })
 
 rl.on('line', (line) => {
-  console.log(`Line from file: ${line}`);
-});
+  console.log(`Line from file: ${line}`)
+})
