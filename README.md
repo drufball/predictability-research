@@ -11,28 +11,28 @@ From there, we look at how many of those first implementations ultimately led to
 We then calculate the average time it took for a second implementation to appear.
 
 __Chrome:__
-Shipped 1152 to 1344 APIs first
-45-53% of APIs shipped first have another implementation
-Average time to second implementation: 425 days
-Median time to second implementation: 497 days
+- Shipped 1152 to 1344 APIs first
+- 45-53% of APIs shipped first have another implementation
+- Average time to second implementation: 425 days
+- Median time to second implementation: 497 days
 
 __Firefox:__
-Shipped 1435 to 1512 APIs first
-31-34% of APIs shipped first have another implementation
-Average time to second implementation: 170 days
-Median time to second implementation: 1 days
+- Shipped 1435 to 1512 APIs first
+- 31-34% of APIs shipped first have another implementation
+- Average time to second implementation: 170 days
+- Median time to second implementation: 1 days
 
 __Edge:__
-Shipped 1341 to 1341 APIs first
-14-14% of APIs shipped first have another implementation
-Average time to second implementation: 612 days
-Median time to second implementation: 691 days
+- Shipped 1341 to 1341 APIs first
+- 14-14% of APIs shipped first have another implementation
+- Average time to second implementation: 612 days
+- Median time to second implementation: 691 days
 
 __Safari:__
-Shipped 760 to 760 APIs first
-3-3% of APIs shipped first have another implementation
-Average time to second implementation: 159 days
-Median time to second implementation: 106 days
+- Shipped 760 to 760 APIs first
+- 3-3% of APIs shipped first have another implementation
+- Average time to second implementation: 159 days
+- Median time to second implementation: 106 days
 
 # Caveats
 We do not count any APIs that were implemented in the first version available in our dataset for Chrome, Safari, or Firefox. This is because we can't tell who was the first to implement.
