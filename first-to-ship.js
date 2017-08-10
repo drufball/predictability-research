@@ -42,6 +42,8 @@ function computeImplementationOrder(implData) {
     let firstReleaseData = fields[2].split(" ")
     let browser = firstReleaseData[0]
     let version = firstReleaseData[1]
+
+    // We have so little data for Edge, it's not worth excluding the first version
     if(helpers.firstRelease(browser, version) && (browser != "Edge")) {
       return
     }
@@ -53,6 +55,9 @@ function computeImplementationOrder(implData) {
         let followerBrowser = followerData[0]
         let followerVersion = followerData[1]
 
+        // If one of the follower browsers is the first release in our data
+        // set for that browser, we don't know if the API was implemented
+        // previously.
         if( helpers.firstRelease(followerBrowser, followerVersion) ) {
           ambiguousCases[browser]++
           ambiguous = true
