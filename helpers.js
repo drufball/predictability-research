@@ -1,5 +1,5 @@
 const fs = require('fs')
-const releaseDates = JSON.parse(fs.readFileSync('release-dates.json', {'encoding':'utf-8'}))
+const releaseDates = JSON.parse(fs.readFileSync('data/release-dates.json', {'encoding':'utf-8'}))
 
 module.exports = {
   firstRelease: function(browser, version) {

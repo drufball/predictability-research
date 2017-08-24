@@ -3,7 +3,7 @@ const readline = require('readline')
 const helpers = require('./helpers.js')
 
 const rl = readline.createInterface({
-  input: fs.createReadStream('sanitized-api-data.txt')
+  input: fs.createReadStream('data/sanitized-api-data.csv')
 })
 
 let firstToShipCounts = {
