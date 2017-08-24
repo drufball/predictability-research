@@ -10,29 +10,49 @@ From there, we look at how many of those first implementations ultimately led to
 
 We then calculate the average time it took for a second implementation to appear.
 
-__Chrome:__
-- Shipped 1152 to 1344 APIs first
+__Chrome__:
+- Shipped 1161 to 1353 APIs first
 - 45-53% of APIs shipped first have another implementation
-- Average time to second implementation: 425 days
-- Median time to second implementation: 497 days
+- Average time to second implementation: 132 days
+- Median time to second implementation: 123 days
 
-__Firefox:__
-- Shipped 1435 to 1512 APIs first
-- 31-34% of APIs shipped first have another implementation
-- Average time to second implementation: 170 days
+__Firefox__:
+- Shipped 1444 to 1520 APIs first
+- 30-34% of APIs shipped first have another implementation
+- Average time to second implementation: 172 days
 - Median time to second implementation: 1 days
 
-__Edge:__
-- Shipped 1341 to 1341 APIs first
-- 14-14% of APIs shipped first have another implementation
-- Average time to second implementation: 612 days
-- Median time to second implementation: 691 days
+__Edge__:
+- Shipped 1261 to 1261 APIs first
+- 20-20% of APIs shipped first have another implementation
+- Average time to second implementation: 391 days
+- Median time to second implementation: 421 days
 
-__Safari:__
-- Shipped 760 to 760 APIs first
-- 3-3% of APIs shipped first have another implementation
-- Average time to second implementation: 159 days
-- Median time to second implementation: 106 days
+__Safari__:
+- Shipped 824 to 900 APIs first
+- 6-14% of APIs shipped first have another implementation
+- Average time to second implementation: 472 days
+- Median time to second implementation: 148 days
+
+# First to ship results normalized
+For this analysis, we do the same as the first to ship results, except each time a browser ships an API first, we give it a score of 1 / {# of APIs in the interface it belongs to}.
+The reasoning behind this is account interfaces that have a large amount of APIs and to make sure our analysis isn't skewed by a small set of interfaces that dominate all the API counts. We call each of these units an "interface adjusted count" :)
+
+__Chrome__:
+- Shipped 125.30 to 139.72 interface adjusted counts first
+- 43-49% of interface adjusted counts shipped first have another implementation
+
+__Firefox__:
+- Shipped 49.17 to 58.42 interface adjusted counts first
+- 31-42% of interface adjusted counts shipped first have another implementation
+
+__Edge__:
+- Shipped 123.37 to 123.37 interface adjusted counts first
+- 20-20% of interface adjusted counts shipped first have another implementation
+
+__Safari__:
+- Shipped 57.40 to 64.65 interface adjusted counts first
+- 8-18% of interface adjusted counts shipped first have another implementation
 
 # Caveats
 We do not count any APIs that were implemented in the first version available in our dataset for Chrome, Safari, or Firefox. This is because we can't tell who was the first to implement.
