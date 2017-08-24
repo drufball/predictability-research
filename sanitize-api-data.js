@@ -1,7 +1,7 @@
 const fs = require('fs')
 const readline = require('readline')
 const rl = readline.createInterface({
-  input: fs.createReadStream('apiData.csv')
+  input: fs.createReadStream('data/api-data.csv')
 })
 
 let headingsToCheck = {}
@@ -40,7 +40,7 @@ rl.on('line', (line) => {
 })
 
 rl.on('close', () => {
-  fs.writeFile('sanitized-api-data.txt', convertToString(implementationStatusForFeature), (err) => {
+  fs.writeFile('data/sanitized-api-data.csv', convertToString(implementationStatusForFeature), (err) => {
     if(err) {
       console.log(err)
     }
